@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Hesap Makinesi</title>
+	<style>
+	
+	body{
+		justify-content: center;
+		display: flex;
+	}
+.container{
+    display: flex;
+	justify-content: center;
+	border: solid 1px;
+	width: 300px;
+	height: 300px;
+	position: relative;
+	background-image: repeating-linear-gradient(red, yellow  ,blue , green);
+} 
+
+    .numbers{
+		display: grid;
+		grid-template-columns:50px 50px 50px 50px;
+		grid-template-rows: 50px 50px 50px 50px ;
+		position: absolute;
+	    bottom: 0;
+	}
+
+
+	#yedi:hover , #sekiz:hover , #dokuz:hover , #bolme:hover{
+	background-color: red;
+	transition: all 0.7s linear;
+}
+
+#dort:hover , #bes:hover , #alti:hover , #carpma:hover{
+	background-color: yellow;
+	transition: all 0.7s linear;
+}
+
+#bir:hover , #iki:hover , #uc:hover , #eksi:hover{
+	background-color: blue;
+	transition: all 0.7s linear;
+}
+#sifir:hover , #nokta:hover , #esittir:hover , #arti:hover{
+	background-color: red;
+	transition: all 0.7s linear;
+}
+#esittir:active{
+	transition: all;
+	background-color: white;
+}
+</style>
+</head>
+<body>
+	<div class="container">
+		<div class="input">
+		<input type="text" size="38">
+	</div>
+	<div class="numbers">
+	<button id="yedi">7</button>
+    <button id="sekiz">8</button>
+    <button id="dokuz">9</button>
+    <button id="bolme">/</button>
+    <button id="dort">4</button>
+    <button id="bes">5</button>
+    <button id="alti">6</button>
+    <button id="carpma">x</button>
+    <button id="bir">1</button>
+    <button id="iki">2</button>
+    <button id="uc">3</button>
+    <button id="eksi">-</button>
+    <button id="sifir">0</button>
+    <button id="nokta">.</button>
+    <button id="esittir">=</button>
+    <button id="arti">+</button>
+</div>
+</div>
+	
+</body>
+</html>
