@@ -1,0 +1,68 @@
+﻿DNS Resolution
+
+
+Urlden Ip adresini belirler ve bunu bulurken System call yapar ve Router sorgular böyle böyle aşamalarla beraber ıp erişir. Url sistemindeki Root, Thirf level Domain Second level domain, ve top level domain ıpe erişilmesi için eşsiz yapılardır. ve bu sorgulama rootdan başlar ve top levela doğru gider.
+
+
+
+
+
+
+
+
+
+
+
+
+TCP three-way handshake
+
+
+Client ve server arasında aktarım yapmadan önce tcp ile bağlantı kurulur. üçlü bağlantı kurulmasının sebebi karşılıklı iletişimi sağlamak için yapılır. Eğer ikili bağlantı kurulursa tek yönü bi iletişim sağlanır. Üçlü bağlantıda ilk client dan servera Syn kodu gider bu kod x’li sıralama. Eğer server kabul ederse SYN ACK kodu gönderiri bu kod da gönderilen x’li kod sıralamasının bir x daha fazlasıdır bununla beraber bir de y’li bir sıralama göderir. Son aşama olarak Client Ack kod gönderir bu kod da ekstra y li bi sıralamadır.
+
+
+
+
+
+
+Https upgrade ve SSL
+
+
+Https, Http’nin daha verimli çalışan bir koludur sonundaki s ise secure dan gelir. Http bilgiler yazı formatında gönderirken Https şifrelenmiş mesajlar halinde gönderir. aktarım sırasında yaşanabilecek problemleri minimuma çeker. Http’den bahsederken iki tane kavram(şifreleme ) önemli: Assymetric encryption, bir çift anahtardan oluşur biri public diğeri ise private dır ve Symetric encryption, burda ise bir tane private key vardır ve client ve server da bu anahtara sahiptir. Httpden Https e geliştirme yapılırken, Client Http methodları üzerinden istek yapar. Server ise SSL serifaksını gönderiri bununla beraber public key de gönderilir. SSL sertifakısının 3 tane opsiyonu vardır: ilki DV (Domain Validation) En kolay alınan onaylanması en kolay sertifakadır ve domain sahibi olduğunu belirtir. İkincisi OV(Organization Validation), Dv gibi domain ile ilgili sahiblik belirtir fakat arkasında legal bir temel olduğunu da gösterir. Dv ye nazaran alması daha uzun sürer ve maliyeti de daha fazladır. EV(Extended Validation) ise en kompleks sertifakadır maliyeti, alma süresi, meşakatlidir. Devlet ile bağlantılı kurumlar ve bankaların sahip olması gereken bir sertifakadır. Bu sertifakalar CA( Certifcate Authority) tarafından verilir.
+
+
+Server’a erişim isteği verildiğin zaman serverdan public key verilir. Client Private key oluşturur ve server a bir kopyası gönderilir.
+
+
+
+
+HTTP ve HTTPS farkları
+
+
+Http aynı anda bir tane çağrı karşılayabilirken HTTPS daha çok cevaplayabilir. Bu da HTTPS HTTP e ye nazaran daha hızlı yapar.
+Encrypted mesajları sayesinde HTTPS kullanılarak yapılan client-server iletişimi tamamen güvenli şekilde gerçekleşir. 
+
+
+
+
+Bu farklar bile HTTPS in daha kısa sürede daha fazla etkileşime girer ve bunları daha güvenli bir şekilde yapar. 
+
+
+
+
+
+
+
+
+
+
+
+
+HTTP Request ve Response
+
+
+HTTP request methodları, Resource a erişmek ,değiştirmek, takip etmek gibi görevler için kullanılır. get, head, post, put, delete, trace gibi isimlerler hedeflenen resource ile ilgili aksyionlar alınır.
+
+
+
+
+HTTP responseları status codeları ile sayılar ile gösterilir. 100-199 arası kodlar bilgi veren responselardır. 200-299 arası responselar başarılı veya kısmi başarılı bildirileri verir. Bu kodların tabiiki de hepsi farklı mesajlar vermek için kullanılır. 300-399 arası mesajlar farklı bir yere yönlendiren mesajlardır, örnek olarak resource un yeri değiştiyse, yeni lokasyona yönlendirilir. 400-499 arası mesajlar hataları ve sebeblerini belirtir bu hatalar client taradından kaynaklanan hatalardır. 500-599 arası cevaplar server tarafından kaynaklanan hataları belirtir.
