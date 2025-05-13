@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hesap Makinesi</title>
+    <style>
+      body {
+        justify-content: center;
+        display: flex;
+      }
+      .container {
+        display: flex;
+        justify-content: center;
+        border: solid 1px;
+        width: 300px;
+        height: 300px;
+        position: relative;
+        background-image: repeating-linear-gradient(red, yellow, blue, green);
+      }
+
+      .numbers {
+        display: grid;
+        grid-template-columns: 50px 50px 50px 50px;
+        grid-template-rows: 50px 50px 50px 50px;
+        position: absolute;
+        bottom: 0;
+        padding: 15px;
+      }
+
+      #seven:hover,
+      #eight:hover,
+      #nine:hover,
+      #divide:hover {
+        background-color: brown;
+        transition: all 0.7s linear;
+      }
+
+      #four:hover,
+      #five:hover,
+      #six:hover,
+      #multiply:hover {
+        background-color: yellow;
+        transition: all 0.7s linear;
+      }
+
+      #one:hover,
+      #two:hover,
+      #three:hover,
+      #minus:hover {
+        background-color: blue;
+        transition: all 0.7s linear;
+      }
+      #zero:hover,
+      #dot:hover,
+      #equals:hover,
+      #plus:hover {
+        background-color: red;
+        transition: all 0.7s linear;
+      }
+      #equals:active,
+      #zero:active,
+      #dot:active,
+      #plus:active,
+      #one:active,
+      #two:active,
+      #three:active,
+      #minus:active,
+      #four:active,
+      #five:active,
+      #six:active,
+      #multiply:active,
+      #seven:active,
+      #eight:active,
+      #nine:active,
+      #divide:active {
+        transition: all;
+        background-color: rgb(174, 100, 179);
+      }
+      input[type="text"] {
+        width: 80%;
+        padding: 10px;
+        margin: 20px 30px;
+        box-sizing: border-box;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="input">
+        <input type="text" size="38" />
+      </div>
+      <div class="numbers">
+        <button id="seven">7</button>
+        <button id="eight">8</button>
+        <button id="nine">9</button>
+        <button id="divide">/</button>
+        <button id="four">4</button>
+        <button id="five">5</button>
+        <button id="six">6</button>
+        <button id="multiply">x</button>
+        <button id="one">1</button>
+        <button id="two">2</button>
+        <button id="three">3</button>
+        <button id="minus">-</button>
+        <button id="zero">0</button>
+        <button id="dot">.</button>
+        <button id="equals">=</button>
+        <button id="plus">+</button>
+      </div>
+    </div>
+  </body>
+</html>
